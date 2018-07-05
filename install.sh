@@ -57,7 +57,7 @@ backup() {
 
 link() {
 	echo -e "${COLOR_GREEN}Linking ${COLOR_CYAN}$2 ${COLOR_GREEN}to ${COLOR_CYAN}$SRC/$1${COLOR_DEFAULT}"
-	if [ -h $2 ]; then
+	if [ -h $2 ] || [ -f $2 ]; then
 		backup $2
 	fi
 
