@@ -4,8 +4,17 @@ export ZSH=~/.oh-my-zsh
 # Set name of the theme to load.
 ZSH_THEME="jonathan"
 
+# TMUX plugin config 
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART_ONCE=true
+ZSH_TMUX_AUTOCONNECT=true
+ZSH_TMUX_AUTOQUIT=false
+ZSH_TMUX_FIXTERM=true
+ZSH_TMUX_UNICODE=true
+
+
 # Which plugins would you like to load?
-plugins=(git zsh-autosuggestions)
+plugins=(git history zsh-autosuggestions tmux)
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
@@ -40,13 +49,9 @@ export EDITOR="vim"
 
 REPORTTIME=10
 
-# Autostart tmux
-SESSION=TMUX
-if [[ -z "$TMUX" ]]; then
-    tmux attach-session -t $SESSION || tmux new-session -s $SESSION
-fi
-
 if [ -f $HOME/.dotfiles-first-run ]; then
 	echo "You have successfully installed chmod's dotfiles"
 	rm $HOME/.dotfiles-first-run
 fi;
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
