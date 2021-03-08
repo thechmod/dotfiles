@@ -17,7 +17,7 @@ ZSH_TMUX_UNICODE=true
 plugins=(git history zsh-autosuggestions tmux term_tab)
 
 # User configuration
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,5 +53,3 @@ if [ -f $HOME/.dotfiles-first-run ]; then
 	echo "You have successfully installed chmod's dotfiles"
 	rm $HOME/.dotfiles-first-run
 fi;
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
