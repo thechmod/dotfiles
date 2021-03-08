@@ -7,6 +7,9 @@ dependencies=(
 	git
 	zsh
 	tmux
+	gawk
+	netstat
+	numfmt
 )
 
 ##############
