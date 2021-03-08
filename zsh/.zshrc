@@ -14,7 +14,7 @@ ZSH_TMUX_UNICODE=true
 
 
 # Which plugins would you like to load?
-plugins=(git history zsh-autosuggestions tmux)
+plugins=(git history zsh-autosuggestions tmux term_tab)
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
