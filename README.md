@@ -9,6 +9,9 @@ First, you need to install these packages:
 - `git`
 - `zsh`
 - `tmux`
+- `awk (GNU awk)`
+- `netstat`
+- `numfmt`
 
 ### Install
 
