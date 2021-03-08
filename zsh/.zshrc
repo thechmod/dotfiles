@@ -2,7 +2,7 @@
 export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="jonathan"
+ZSH_THEME="fino-time"
 
 # TMUX plugin config 
 ZSH_TMUX_AUTOSTART=true
