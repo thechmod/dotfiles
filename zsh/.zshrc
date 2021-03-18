@@ -20,6 +20,7 @@ plugins=(git history zsh-autosuggestions tmux term_tab)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
+source $ZSH_CUSTOM/plugins/zsh-bd/bd.zsh
 
 alias l='ls -lah'
 alias cp='rsync -r -ah --info=progress2'

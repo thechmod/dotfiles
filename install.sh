@@ -100,6 +100,17 @@ zsh_plugins_install() {
 		echo -e "${COLOR_RED}=> FAIL${COLOR_DEFAULT}"
 		exit
 	fi;
+
+
+	echo -e "${COLOR_GREEN}--zsh-bd${COLOR_DEFAULT}"
+	git clone https://github.com/Tarrasch/zsh-bd $HOME/.oh-my-zsh/custom/plugins/zsh-bd
+	
+	if [ $? -eq 0 ] && [ -d $HOME/.oh-my-zsh/custom/plugins/zsh-bd ]; then
+		echo -e "${COLOR_GREEN}=> OK${COLOR_DEFAULT}"
+	else
+		echo -e "${COLOR_RED}=> FAIL${COLOR_DEFAULT}"
+		exit
+	fi;
 }
 
 
