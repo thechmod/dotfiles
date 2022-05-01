@@ -10,6 +10,7 @@ dependencies=(
 	gawk
 	netstat
 	numfmt
+	exa
 )
 
 ##############
@@ -106,6 +107,33 @@ zsh_plugins_install() {
 	git clone https://github.com/Tarrasch/zsh-bd $HOME/.oh-my-zsh/custom/plugins/zsh-bd
 	
 	if [ $? -eq 0 ] && [ -d $HOME/.oh-my-zsh/custom/plugins/zsh-bd ]; then
+		echo -e "${COLOR_GREEN}=> OK${COLOR_DEFAULT}"
+	else
+		echo -e "${COLOR_RED}=> FAIL${COLOR_DEFAULT}"
+		exit
+	fi;
+
+
+	echo -e "${COLOR_GREEN}---zsh-syntax-highlighting${COLOR_DEFAULT}"
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+	if [ $? -eq 0 ] && [ -d $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]; then
+		echo -e "${COLOR_GREEN}=> OK${COLOR_DEFAULT}"
+	else
+		echo -e "${COLOR_RED}=> FAIL${COLOR_DEFAULT}"
+		exit
+	fi;
+	
+	
+	echo -e "${COLOR_GREEN}--fzf${COLOR_DEFAULT}"
+	echo -e "${COLOR_RED}Do not modify configs${COLOR_DEFAULT}"
+	if ! git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf 2>/dev/null && [ -d $HOME/.fzf ] ; then
+		echo -e "${COLOR_YELLOW}~/.fzf already exists. Skipping...${COLOR_DEFAULT}"
+	else
+		$HOME/.fzf/install
+	fi
+	
+	if [ $? -eq 0 ] && [ -d $HOME/.fzf ]; then
 		echo -e "${COLOR_GREEN}=> OK${COLOR_DEFAULT}"
 	else
 		echo -e "${COLOR_RED}=> FAIL${COLOR_DEFAULT}"

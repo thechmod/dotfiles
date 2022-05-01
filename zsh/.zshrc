@@ -14,15 +14,17 @@ ZSH_TMUX_UNICODE=true
 
 
 # Which plugins would you like to load?
-plugins=(git history zsh-autosuggestions tmux term_tab)
+plugins=(git history zsh-autosuggestions tmux term_tab docker docker-compose)
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH_CUSTOM/plugins/zsh-bd/bd.zsh
+source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-alias l='ls -lah'
+alias l='exa -lagh --icons --git --group-directories-first'
+alias ls='exa -a --group-directories-first'
 alias cp='rsync -r -ah --info=progress2'
 alias tmux='tmux -2'
 
@@ -49,6 +51,8 @@ export LC_ALL="en_US.UTF-8"
 export EDITOR="vim"
 
 REPORTTIME=10
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if [ -f $HOME/.dotfiles-first-run ]; then
 	echo "You have successfully installed chmod's dotfiles"

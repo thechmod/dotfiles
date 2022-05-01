@@ -12,6 +12,7 @@ First, you need to install these packages:
 - `awk (GNU awk)`
 - `netstat`
 - `numfmt`
+- `exa`
 
 ### Install
 
