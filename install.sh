@@ -139,6 +139,17 @@ zsh_plugins_install() {
 		echo -e "${COLOR_RED}=> FAIL${COLOR_DEFAULT}"
 		exit
 	fi;
+
+
+	echo -e "${COLOR_GREEN}--fzf-tab${COLOR_DEFAULT}"
+	git clone https://github.com/Aloxaf/fzf-tab $HOME/.oh-my-zsh/custom/plugins/fzf-tab
+
+	if [ $? -eq 0 ] && [ -d $HOME/.oh-my-zsh/custom/plugins/fzf-tab ]; then
+		echo -e "${COLOR_GREEN}=> OK${COLOR_DEFAULT}"
+	else
+		echo -e "${COLOR_RED}=> FAIL${COLOR_DEFAULT}"
+		exit
+	fi;
 }
 
 

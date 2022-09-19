@@ -14,7 +14,7 @@ ZSH_TMUX_UNICODE=true
 
 
 # Which plugins would you like to load?
-plugins=(git history zsh-autosuggestions tmux term_tab docker docker-compose)
+plugins=(git history zsh-autosuggestions tmux term_tab docker docker-compose fzf-tab)
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
