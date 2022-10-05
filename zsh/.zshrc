@@ -32,6 +32,10 @@ ipinfo() {
 	http --body ipinfo.io/$1
 }
 
+loop() {
+	while true; do $1; done
+}
+
 export LANG=en_US.UTF-8
 export LANGUAGE=
 export LC_CTYPE=en_US.UTF-8
