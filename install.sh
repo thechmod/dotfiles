@@ -205,6 +205,7 @@ main() {
 	echo
 	
 	if check_dependencies; then
+		zoxide_install
 		zsh_install
 		tmux_install
 
