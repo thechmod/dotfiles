@@ -17,7 +17,7 @@ ZSH_TMUX_UNICODE=true
 plugins=(git history zsh-autosuggestions tmux term_tab docker docker-compose fzf-tab)
 
 # User configuration
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.local/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH_CUSTOM/plugins/zsh-bd/bd.zsh
@@ -57,6 +57,8 @@ export EDITOR="vim"
 REPORTTIME=10
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(zoxide init --cmd cd zsh)"
 
 if [ -f $HOME/.dotfiles-first-run ]; then
 	echo "You have successfully installed chmod's dotfiles"

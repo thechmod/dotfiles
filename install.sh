@@ -68,6 +68,16 @@ link() {
 	ln -s $SRC/$1 $2
 }
 
+zoxide_install() {
+	curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+
+	if [ $? -eq 0 ] && [ -f $HOME/.local/bin/zoxide ]; then
+		echo -e "${COLOR_GREEN}=> OK${COLOR_DEFAULT}"
+	else
+		echo -e "${COLOR_RED}=> FAILED${COLOR_DEFAULT}"
+		exit
+	fi;
+}
 
 zsh_install() {
 	echo -e "${COLOR_GREEN}Installing oh-my-zsh${COLOR_DEFAULT}"
